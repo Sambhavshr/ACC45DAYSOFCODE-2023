@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int testCases;
+    scanf("%d", &testCases);
+
+    while (testCases--) {
+        int dailyGoal, chocolatesSold;
+        scanf("%d", &dailyGoal);
+        printf("%d: Chef's daily goal was %d. Since he sold ", testCases + 1, dailyGoal);
+        scanf("%d", &chocolatesSold);
+
+        int totalAmount = 0;
+        if (chocolatesSold <= dailyGoal) {
+            totalAmount = chocolatesSold;
+        } else {
+            totalAmount = dailyGoal + (chocolatesSold - dailyGoal) * 2;
+        }
+
+        printf("%d chocolate(s), he'll get %d rupee(s).\n", chocolatesSold, totalAmount);
+    }
+
+    return 0;
+}
+
