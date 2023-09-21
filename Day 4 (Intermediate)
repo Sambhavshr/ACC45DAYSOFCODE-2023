@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int test_cases;
+    scanf("%d", &test_cases);
+
+    while (test_cases--) {
+        int L;
+        double V1, V2;
+        scanf("%d %lf %lf", &L, &V1, &V2);
+
+        double tortoise_time = (double)L / V1;
+        double hare_time = (double)L / V2;
+
+        if (tortoise_time > hare_time) {
+            int wait_time = ceil(tortoise_time) - ceil(hare_time);
+            printf("%d\n", wait_time);
+        } else {
+            printf("-1\n");
+        }
+    }
+
+    return 0;
+}
