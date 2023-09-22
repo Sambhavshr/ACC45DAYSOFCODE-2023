@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int N;
+        scanf("%d", &N);
+
+        // The last hoop that will be jumped into is N/2 + 1.
+        // This is because you and your friend take turns, so you jump into even-numbered hoops
+        // and your friend jumps into odd-numbered hoops until one of you can't make the next jump.
+        // When N is odd, the last hoop is (N + 1) / 2.
+        printf("%d\n", (N + 1) / 2);
+    }
+
+    return 0;
+}
