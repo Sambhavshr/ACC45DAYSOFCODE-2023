@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int test;
+cin>>test;
+for(int i=1; i<=test;i++);
+{
+       int x,y,z,end1;
+       cin>>x>>y>>z;
+       int timeTaken=y/x;
+       int answer= z-timeTaken;
+       if( answer<=0)
+        {
+           cout<<0<<end1;
+        }
+        else
+        {
+         cout<<answer<<end1;
+        
+         }
+         
+     }
+}
